@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" href="styles.css" type="text/css" />
+<link href="jquery-ui-1.10.3.custom/css/ui-lightness/jquery-ui-1.10.3.custom.css" rel="stylesheet">
+<script type="text/javascript" src="jquery-1.10.2.js"></script>
+<script type="text/javascript" src="jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.js"></script>
+<script type="text/javascript" src="jQueryRotate.js"></script>
+<script type="text/javascript" src="scritp.js"></script>
+<title>Human Computer Interaction -- Bike App</title>
+</head>
+<body>
+
+<div id="main-wrap">
+	<div id="first-wrap">
+		<div id="pantalla">
+			<!-- Inicio --> 
+			<div id="background"></div>
+			
+			<div name="1" id="lanzamiento" state="1" class="l element"><div id="link-lanamiento"></div></div>
+			
+			<!-- menu -->
+			<div id="menu" class="element">
+				<div name="2" id="menu-mapa" state="2"  class="l link"></div>
+				<div name="3" id="menu-alertas" state="3" class="l link"></div>
+				<div name="4" id="menu-volumen" state="4" class="l link"></div>
+				<div name="5" id="menu-opciones" state="5" class="l link"></div>
+			</div>
+			
+			<!-- marcador de metros  -->
+			<!--
+			<div id="marcador-metros" class="element rounded-corners"> <h3>70 m </h3> </div>
+			-->
+			
+			<!-- Brujula  -->
+			<div id="brujula" class="element">
+				<div id="circulo"></div>
+				<div id="flecha"></div>
+				<div id="marcador2">120</div> 
+			</div>
+			
+			<!-- Mapa -->
+			<div id="marcador-mapa" class="element"></div>
+			
+			<!-- Alertas -->
+			<div id="alertas-brujula" class="element"></div>
+			
+			<div id="alertas-mapa" class="element"></div>
+			
+			<!-- Volumen -->
+			<div id="volumen" class="element">
+				<div id="control-volumen"></div>
+				<div id="volumen-numeros">10</div>
+			</div>
+			
+			<!-- Opciones -->
+			<div id="opciones" class="element">
+				<div id="optionlist">
+					<div class="option optionlist" title="radio-accion"> Radio de acción </div>
+					<div class="option optionlist" title="tipo-de-voz"> Tipo de voz </div>
+					<div class="option optionlist" title="tipo-de-tono"> Tipo de tonos</div>
+					<div class="option optionlist" title="tipo-de-mapa"> Mapa </div>
+				</div>
+				
+				<div id="radio-accion" class="element">
+					<div id="metros-radio_de-accion"> <span id="medida">200</span> metros</div>
+					<div id="slider-radio-de-accion"></div>
+				</div>
+				
+				<div id="tipo-de-voz" class="element">
+					<div id="voz-1" class="option option-voz tic" title="tipo-de-voz"> Voz 1 </div>
+					<div id="voz-2" class="option option-voz" title="tipo-de-voz"> Voz 2 </div>
+					<div id="voz-3" class="option option-voz" title="tipo-de-voz"> Voz 3</div>
+					<div id="voz-4" class="option option-voz" title="tipo-de-voz"> Voz 4 </div>
+				</div>
+				
+				<div id="tipo-de-tono" class="element">
+					<div id="tono-1" class="option option-tono tic" title="tipo-de-tono"> Tono 1 </div>
+					<div id="tono-2" class="option option-tono" title="tipo-de-tono"> Tono 2 </div>
+					<div id="tono-3" class="option option-tono" title="tipo-de-tono"> Tono 3</div>
+					<div id="tono-4" class="option option-tono" title="tipo-de-tono"> Tono 4 </div>
+				</div>
+				
+				<div id="tipo-de-mapa" class="element">
+					<div id="mapa-1" class="option option-mapa tic" title="tipo-de-mapa"> Mapa 1 </div>
+					<div id="mapa-2" class="option option-mapa" title="tipo-de-mapa"> Mapa 2 </div>
+					<div id="mapa-3" class="option option-mapa" title="tipo-de-mapa"> Mapa 3</div>
+					<div id="mapa-4" class="option option-mapa" title="tipo-de-mapa"> Mapa 4 </div>
+				</div>
+				
+			</div>
+		
+		</div>
+	</div>
+	<div id="second-wrap">
+	
+		<div id="instrucciones"> 
+			<h2>Instrucciones de uso</h2>
+			<ol>
+				<li>Los mejores navegadores para visualizar el proyecto son <strong>Mozilla</strong> y <strong>Chrome</strong>.</li>
+				<li>La aplicacion tiene sonido, asi que enciendo los altavoces</li>
+				<li>Lanza la aplicación con el botón rojo marcado.</li>
+				<li>El siguiente boton muestra como funciona la brujula:
+					<div id="brujula-trigger">
+						<input type="button" id="boton-brujula" class="rounded-corners" value="brujula"> </input>
+					</div>
+				</li>
+				<li> Para simular un viaje en bicileta, podras hacerlo a través de los botonos en la aprte inferior. Cuando la simulación empieza,
+				los elementos de la aplicación interacturan para mostrar las diferentes funcionalidades. EN el paso 20 podras encontrar una alerta
+				que sonara si tienes el boton de alertas encendido. En el paso 30, podras ver que hace la aplicacion cuando llegar a un carril bici</li>
+				
+			</ol>
+		</div>
+		
+		
+		
+		<div id="timer">
+			<div id="botones">
+				<input type="button" id="empezar-timer" class="boton-timer rounded-corners" value="Empezar Paseo en bicicleta"> </input>
+				<input type="button"  id="terminar-timer" class="boton-timer rounded-corners" value="Terminar Paseo en bicicleta">  </input>
+			</div>
+			<div id="counter"> 
+				<p>Posicion del simulador: <span id ="count-times">0</span> / 34</p>
+			</div>
+			
+			<!--
+			<div id="map-prueba">
+				<div id="marcador-mapa"></div>
+			</div>
+			-->
+		</div>
+	
+	</div>
+</div>
+
+</body>
+</html>
